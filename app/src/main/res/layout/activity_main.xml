@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
+    tools:context=".view.MainActivity"
+    android:background="@android:color/transparent">
 
     <com.haggai.myslideshow.view.ExchangeContainer android:id="@+id/slide_displayer"
         android:layout_width="match_parent"

@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@android:color/transparent">
 
     <ImageView
         android:layout_width="match_parent"
@@ -12,10 +12,10 @@
     <com.haggai.myslideshow.view.ListItemDisplayer android:id="@+id/first_displayer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:scaleType="centerInside"/>
     <com.haggai.myslideshow.view.ListItemDisplayer android:id="@+id/second_displayer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:scaleType="centerInside"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
