@@ -4,11 +4,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/transparent">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerInside"
-        android:src="@drawable/placeholder_image"/>
+
     <com.haggai.myslideshow.view.ListItemDisplayer android:id="@+id/first_displayer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
