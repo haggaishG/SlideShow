@@ -20,15 +20,14 @@ import retrofit2.http.GET
 import java.net.HttpURLConnection
 import java.net.URL
 
-var listFetchUrldflt = "https://test.onsignage.com/PlayerBackend/screen/playlistItems/e490b14d-987d-414f-a822-1e7703b37ce4";
-var creativeFetchBaseUrlDflt = "https://test.onsignage.com/PlayerBackend/creative/get/";
+val SLIDE_DISPLAY_INTERVAL:Long = 40*1000
 class MainViewModel(application: Application) :
     AndroidViewModel(application)
 {
 
 
-    val listFetchUrl:String = listFetchUrldflt
-    val creativeFechBaseUrl:String = creativeFetchBaseUrlDflt
+
+    val creativeFechBaseUrl:String = "https://test.onsignage.com/PlayerBackend/creative/get/";
     val itemToPlay: LiveData<PlayListItem> get() = _item
     val error: LiveData<String> get() = _error
     private lateinit var listToPlay:List<PlayListItem>
@@ -66,7 +65,7 @@ class MainViewModel(application: Application) :
                         listToPlay = listToPlay+list.playlistItems
                     }
                     if(listToPlay.isNotEmpty()){
-                        displayTimer = object : CountDownTimer(10000, 10000) { // 10 seconds countdown, tick every second
+                        displayTimer = object : CountDownTimer(100* SLIDE_DISPLAY_INTERVAL, SLIDE_DISPLAY_INTERVAL) {
 
                             override fun onTick(millisUntilFinished: Long) {
                                 setCurrentCreative()

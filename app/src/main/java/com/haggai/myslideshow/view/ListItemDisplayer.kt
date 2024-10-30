@@ -37,10 +37,10 @@ class ListItemDisplayer @JvmOverloads constructor(
         fadeIn  = AlphaAnimation(0f, 1f)
         fadeOut = AlphaAnimation(1f, 0f)
         fadeIn.interpolator = DecelerateInterpolator()
-        fadeIn.duration = 1000
+        fadeIn.duration = 5000
 
         fadeOut.interpolator = AccelerateInterpolator()
-        fadeOut.duration = 1000
+        fadeOut.duration = 5000
 
     }
 
