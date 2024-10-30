@@ -21,21 +21,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
-        // Observe data LiveData for updates
         viewModel.itemToPlay.observe(this, Observer { data ->
             data?.let {
                 binding.slideDisplayer.loadContent(viewModel.creativeFechBaseUrl+it.creativeKey)
             }
         })
 
-        // Observe error LiveData for error handling
         viewModel.error.observe(this, Observer { errorMessage ->
             errorMessage?.let {
                 // Show error message, e.g., Toast or Snackbar
             }
         })
 
-        // Call fetchData with the desired URL
         viewModel.fetchData()
     }
 }

@@ -92,25 +92,6 @@ class ListItemDisplayer @JvmOverloads constructor(
         binding.imageViewContainer.addView(errorView,LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT)
     }
 
-    fun removeContent(){
-        isDisplaying = false
-        fadeOut.reset()
-        this.setAnimation(fadeOut)
-    }
-
-
-
-    /*
-    public static String getMimeType(File file, Context context)
-{
-    Uri uri = Uri.fromFile(file);
-    ContentResolver cR = context.getContentResolver();
-    MimeTypeMap mime = MimeTypeMap.getSingleton();
-    String type = mime.getExtensionFromMimeType(cR.getType(uri));
-    return type;
-}
-
-     */
 }
 
 

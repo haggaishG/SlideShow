@@ -35,7 +35,6 @@ class MainViewModel(application: Application) :
     var creativeIndex:Int = 0
 
 
-    // Define the API interface
     interface ApiService {
         @GET("PlayerBackend/screen/playlistItems/e490b14d-987d-414f-a822-1e7703b37ce4")
         suspend fun fetchExampleData(): NvsFetchedMeta
@@ -43,7 +42,7 @@ class MainViewModel(application: Application) :
 
     object RetrofitInstance {
         private val retrofit = Retrofit.Builder()
-            .baseUrl("https://test.onsignage.com/") // Use your base URL
+            .baseUrl("https://test.onsignage.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
@@ -84,8 +83,6 @@ class MainViewModel(application: Application) :
         }
     }
 
-    // Function to handle HTTP request in IO context
-
 
     private fun setCurrentCreative(){
         if(listToPlay.isEmpty())
@@ -93,10 +90,6 @@ class MainViewModel(application: Application) :
         _item.value = listToPlay.get(creativeIndex++ % listToPlay.size )
     }
 
-    // Moshi instance for JSON parsing
-    private val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
-    private val adapter = moshi.adapter(List::class.java).nonNull() as JsonAdapter<NvsFetchedMeta>
-    // Mutable LiveData for updating UI
     private val _item = MutableLiveData<PlayListItem>()
     private val _error = MutableLiveData<String>()
 }
