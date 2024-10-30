@@ -21,12 +21,15 @@ class ExchangeContainer @JvmOverloads constructor(
         when (binding.firstDisplayer.isDisplaying) {
             true -> {
                 binding.secondDisplayer.loadContent(creativeKey)
-                binding.secondDisplayer.removeContent()
+                binding.firstDisplayer.visibility = GONE
+                binding.secondDisplayer.visibility = VISIBLE
             }
 
             else ->{
                 binding.firstDisplayer.loadContent(creativeKey)
-                binding.secondDisplayer.removeContent()
+                binding.firstDisplayer.visibility = VISIBLE
+                binding.secondDisplayer.visibility = GONE
+
             }
         }
     }

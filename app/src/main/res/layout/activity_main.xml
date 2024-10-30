@@ -7,13 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity"
 
-    android:background="@color/ugly_green"
+    android:background="@android:color/transparent"
     >
 
     <com.haggai.myslideshow.view.ExchangeContainer
         android:id="@+id/slide_displayer"
         android:layout_width="wrap_content"
-        android:layout_height="wr"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

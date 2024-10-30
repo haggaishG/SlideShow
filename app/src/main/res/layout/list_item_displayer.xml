@@ -3,17 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-        android:background="@color/ugly_blue"
-    >
-    <ImageView android:id="@+id/image_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        />
-    <VideoView android:id="@+id/video_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerInside"
         android:background="@android:color/transparent"
-        android:visibility="gone"/>
+    >
+    <RelativeLayout android:id="@+id/image_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <RelativeLayout android:id="@+id/video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    />
 </androidx.constraintlayout.widget.ConstraintLayout>
